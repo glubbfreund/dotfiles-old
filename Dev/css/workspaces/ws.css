@@ -1,0 +1,41 @@
+.panel-workspace-indicator {
+  padding: 0 0px;
+  margin: 3px;
+  height: 7px;
+  width: 7px;
+  border-radius: 7px;
+
+}
+
+.panel-workspace-indicator-box {
+  padding: 0px 0;
+}
+
+.panel-workspace-indicator-box .workspace {
+  width: 30px;
+}
+
+.panel-workspace-indicator,
+.panel-workspace-indicator-box .workspace {
+  border: 0px solid #cccccc;
+  background-color: #444444;
+  color: #444444;
+}
+
+.panel-workspace-indicator-box .workspace {
+  background-color: rgba(200, 200, 200, 0.3);
+  border-left-width: 0;
+}
+
+.panel-workspace-indicator-box .workspace:first-child {
+  border-left-width: 1px;
+}
+
+.workspace-indicator-active {
+  background-color: #555555;
+  border: 2px ridge #FF8800;
+  color: #555555;
+  height: 7px;
+  width: 22px;
+}
+
