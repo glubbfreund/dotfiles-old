@@ -1,0 +1,26 @@
+: 1699515527:0;ls -al
+: 1699515530:0;rm .zsh_history
+: 1699515531:0;ls -al
+: 1699515539:0;dotfiles status
+: 1699515550:0;dotfiles add .zshrc .histfile .config/tmux/tmux.conf
+: 1699515555:0;dotfiles status
+: 1699515559:0;dotfiles add .xprofile
+: 1699515562:0;dotfiles status
+: 1699515570:0;dotfiles add .config/zsh
+: 1699515573:0;dotfiles status
+: 1699515592:0;rm .config/zsh/.histfile
+: 1699515593:0;ls
+: 1699515594:0;ls -al
+: 1699515599:0;dotfiles status
+: 1699515608:0;ls -al .config/zsh
+: 1699515620:0;rm .config/zsh/.zsh_history
+: 1699515622:0;ls -al
+: 1699515625:0;ls -al .config/zsh
+: 1699515635:0;dotfiles status
+: 1699515651:0;dotfiles add .config/zsh/zsh_history
+: 1699515654:0;dotfiles status
+: 1699515670:0;dotfiles add .config/zsh/.zsh_history
+: 1699515673:0;dotfiles status
+: 1699515678:0;dotfiles add .config/zsh/.histfile
+: 1699515682:0;dotfiles status
+: 1699515711:0;dotfiles add .config/zsh/zsh_history && dotfiles commit -m "updated zsh&tmux" && dotfiles push
