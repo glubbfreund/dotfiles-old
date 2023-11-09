@@ -1,119 +1,163 @@
-: 1699515527:0;ls -al
-: 1699515530:0;rm .zsh_history
-: 1699515531:0;ls -al
-: 1699515539:0;dotfiles status
-: 1699515550:0;dotfiles add .zshrc .histfile .config/tmux/tmux.conf
-: 1699515555:0;dotfiles status
-: 1699515559:0;dotfiles add .xprofile
-: 1699515562:0;dotfiles status
-: 1699515570:0;dotfiles add .config/zsh
-: 1699515573:0;dotfiles status
-: 1699515592:0;rm .config/zsh/.histfile
-: 1699515593:0;ls
-: 1699515594:0;ls -al
-: 1699515599:0;dotfiles status
-: 1699515608:0;ls -al .config/zsh
-: 1699515620:0;rm .config/zsh/.zsh_history
-: 1699515622:0;ls -al
-: 1699515625:0;ls -al .config/zsh
-: 1699515635:0;dotfiles status
-: 1699515651:0;dotfiles add .config/zsh/zsh_history
-: 1699515654:0;dotfiles status
-: 1699515670:0;dotfiles add .config/zsh/.zsh_history
-: 1699515673:0;dotfiles status
-: 1699515678:0;dotfiles add .config/zsh/.histfile
-: 1699515682:0;dotfiles status
-: 1699515711:0;dotfiles add .config/zsh/zsh_history && dotfiles commit -m "updated zsh&tmux" && dotfiles push
-: 1699515731:0;ls -al
-: 1699515810:0;mkdir $HOME/.config/git
-: 1699515868:0;git 
-: 1699515930:0;mv .gitconfig $HOME/.config/git/config
-: 1699515939:0;cd .config
-: 1699515940:0;cd git
-: 1699515940:0;ls
-: 1699515943:0;nvim config
-: 1699515951:0;ls -al
-: 1699515953:0;cd
-: 1699515954:0;ls
-: 1699515955:0;ls -al
-: 1699516015:0;nvim .vim
-: 1699516033:0;cd .config
-: 1699516034:0;cd nvim
-: 1699516035:0;ls
-: 1699516049:0;nvim lua
-: 1699516100:0;ls -al
-: 1699516103:0;rm .zsh_history
-: 1699516104:0;ls 
-: 1699516105:0;ls -al
-: 1699516118:0;nvim .vim
-: 1699516144:0;cd .vim
-: 1699516144:0;ls -al
-: 1699516149:0;cd undodir
-: 1699516151:0;ls -al
-: 1699516153:0;cd ..
-: 1699516154:0;ls
-: 1699516156:0;cd ..
-: 1699516157:0;ls
-: 1699516159:0;ls -al
-: 1699516164:0;cd nvim
-: 1699516164:0;ls
-: 1699516169:0;cd .config
-: 1699516171:0;ls
-: 1699516185:0;mkdir vim 
-: 1699516186:0;ls
-: 1699516200:0;cd ..
-: 1699516201:0;ls -al
-: 1699516225:0;cd .config
-: 1699516225:0;ls
-: 1699516231:0;rmdir vim
-: 1699516232:0;cd ..
-: 1699516233:0;ls -al
-: 1699516258:0;mv -r .vim ~/.config/vim
-: 1699516269:0;cp -r .vim ~/.config/vim
-: 1699516272:0;cd .config
-: 1699516273:0;ls
-: 1699516276:0;cd vim
-: 1699516276:0;ls 
-: 1699516279:0;cd undodir
-: 1699516279:0;ls
-: 1699516311:0;ls 
-: 1699516312:0;ls -al
-: 1699516314:0;ls 
-: 1699516315:0;cd 
-: 1699516317:0;ls -al
-: 1699516321:0;rm -rf .vim
-: 1699516325:0;ls -al
-: 1699516333:0;ls 
-: 1699516335:0;nvim init.lua
-: 1699516338:0;ls
-: 1699516340:0;ls -al
-: 1699516349:0;ls
-: 1699516350:0;cd
-: 1699516351:0;ls
-: 1699516375:0;ls -al
-: 1699516386:0;nvim .xprofile
-: 1699516404:0;ls
-: 1699516405:0;ls -al
-: 1699516409:0;cd .config
-: 1699516409:0;ls
-: 1699516413:0;cd vim
-: 1699516413:0;ls
-: 1699516416:0;cd undodir
-: 1699516416:0;ls
-: 1699516431:0;cd %home%oli%.xprofile
-: 1699516437:0;nvim %home%oli%.xprofile
-: 1699516457:0;nvim .xprofile
-: 1699516462:0;ls -al
-: 1699516471:0;dotfiles status
-: 1699516474:0;cd
-: 1699516476:0;dotfiles status
-: 1699516487:0;cd .config/nvim
-: 1699516488:0;ls
-: 1699516493:0;git status
-: 1699516500:0;git add lua/user/options.lua
-: 1699516510:0;git commit -m "changed history location"
-: 1699516511:0;git push
-: 1699516515:0;cd 
-: 1699516516:0;ls
-: 1699516521:0;dotfiles status
-: 1699516543:0;dotfiles add .config/zsh .config/nvim && dotfiles commit -m "minor things" && dotfiles push
+dotfiles add .zshrc .histfile .config/tmux/tmux.conf
+dotfiles add .xprofile
+dotfiles add .config/zsh
+rm .config/zsh/.histfile
+rm .config/zsh/.zsh_history
+ls -al .config/zsh
+dotfiles add .config/zsh/zsh_history
+dotfiles add .config/zsh/.zsh_history
+dotfiles add .config/zsh/.histfile
+dotfiles add .config/zsh/zsh_history && dotfiles commit -m "updated zsh&tmux" && dotfiles push
+mkdir $HOME/.config/git
+git 
+mv .gitconfig $HOME/.config/git/config
+cd git
+nvim config
+nvim lua
+rm .zsh_history
+nvim .vim
+cd .vim
+cd nvim
+mkdir vim 
+rmdir vim
+mv -r .vim ~/.config/vim
+cp -r .vim ~/.config/vim
+rm -rf .vim
+nvim init.lua
+cd .config
+cd vim
+cd undodir
+cd %home%oli%.xprofile
+nvim %home%oli%.xprofile
+nvim .xprofile
+cd .config/nvim
+git status
+git add lua/user/options.lua
+git commit -m "changed history location"
+git push
+dotfiles add .config/zsh .config/nvim && dotfiles commit -m "minor things" && dotfiles push
+dotfiles status
+sudo apt search imagemagick
+sudo apt autoremove imagemagick
+sudo apt autopurge imagemagick
+sudo apt autoremove
+sudo apt install uberzug
+sudo apt install ueberzug
+ueberzug
+sudo apt autopurge ueberzug
+sudo apt show | grep magick
+sudo apt show | grep image
+sudo apt show 
+sudo apt show image
+sudo apt show *magick*
+sudo apt show *magic*
+sudo apt show *image*
+w3m google.d
+imgdisplay /usr/bin/kitten icat 2>/dev/null
+imgdisplay
+sudo apt search imgdisplay
+sudo apt search w3m
+w3m http://w3m.sourceforge.net
+/usr/lib/w3m/w3mimgdisplay
+ln -s /usr/lib/w3m/w3mimgdisplay /usr/bin
+sudo ln -s /usr/lib/w3m/w3mimgdisplay /usr/bin
+w3mimgdisplay
+sudo apt search sixel
+sudo apt install libsixel-bin
+w3m google.de
+w3m -sixel google.de
+img2sixel
+cd Bilder
+cd Wallpaper
+img2sixel debian-colorful.jpg
+sudo apt autopurge libsixel-bin
+w3m
+sudo apt install imagemagick
+neofetch
+kitty -e w3m 
+kitty -e w3m google.de
+tmux --version
+tmux --help
+apt show tmux
+kitty --help
+[200~curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \\
+    installer=nightly~
+sudo apt remove kitty
+sudo curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \\
+    installer=nightly
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \\
+    installer=nightly
+apt show kitty
+w3m www.google.de
+ls -al
+cd .local
+rm kitty.app
+rm -rf kitty.app
+cd /user/bin
+cd /usr
+cd bin
+ls *kit*
+sudo apt install kitty
+kitty
+cd bash
+sh ~/Dev/bash/tmux.sh\
+
+pwd
+kitty -e /home/oli/Dev/bash/tmux.sh\
+
+\:w
+cd Downloads
+rm *
+cd ..
+cd Dev
+cd rs
+cd rustlab
+clera
+clear
+gkbd-keyboard-display
+gkbd-keyboard-display gr
+gkbd-keyboard-display --help
+gkbd-keyboard-display -l gr
+cd Dev/py/pylab
+source venv/bin/activate
+source deactivate
+deactivate
+tmux new sys
+tmux help
+cd /usr/share/applications
+ls 
+sh
+nvim kitty.desktop
+sudo nvim kitty.desktop
+cd Dev/bash
+rm test.sh
+source tmux.sh
+tmux kill-server
+tmux 
+tmxu ls
+tmux kill-session 3 sys 5
+tmux kill-session 3 
+tmux kill-session -t 3 sys
+tmux kill-session -t 3 
+tmux kill-session -t sys
+tmux kill-session ls
+tmux kill-session -t 5
+tmux
+nvim main.rs
+tmux kill-session -t 6
+tmux ls
+cd 
+cd Srrc
+cd Src
+git clone https://github.com/ai/hide-keyboard-layout
+cd hide-keyboard-layout
+nvim extension.js
+cd
+cd .config/tmux
+ls
+nvim tmux.conf
+exit
+: 1699530520:0;ls
+: 1699530522:0;cd
+: 1699530524:0;dotfiles status
+: 1699530537:0;dotfiles add .config/tmux/tmux.conf .config/zsh/zsh_history
