@@ -155,16 +155,8 @@ nvim zshrc
 ls 
 rm zshrc config
 ln -s .zshrc config
-dotfiles add .config/zsh .config/tmux
-dotfiles status
 dotfiles commit -m "added config simlink in zsh config and tmux changes"
-dotfiles push
 man zshoptions
-cd .config/zsh
-nvim config
-source .zshrc
-cd
-neofetch
 tmux new-session sys
 tmux a sys
 nvim
@@ -172,18 +164,14 @@ tmux
 cd .config/tmux
 cd 
 nvim starship.toml
-nvim py/pylab
 cd .config
 ls -la
-tmux
 ls -a
 tmux kill-session -t 3
 tmux kill-session -t 5
 tmux kill-session -t 4
-tmux ls
 fc-list | grep nerd
 nvim tmux.conf
-ls
 cd ..
 nvim kitty/kitty.conf
 cd kitty
@@ -194,28 +182,67 @@ nvim kitty.conf
 fc-list | grep Nerd
 kitty
 tmux a
+nvim py/pylab
+rm grub.bak
+sudo rm grub.bak
+sudo -E -s nvim grub
+sudo update-grub2
+sudo plymouth-set-default-theme -l
+sudo plymouth-set-default-theme -R brogit-plymouth-theme
+sudo --help
+cd .config/zsh
+cd ~/.config/zsh
+ls
+nvim config
+source .zshrc
+vim
+cd /etc/default
+suvim grub
+neofetch
+sudo apt update && sudo flatpak update
+cd
+dotfiles status
+dotfiles .config/zsh .config/tmux
+dotfiles add .config/zsh .config/tmux
+dotfiles commit -m "small chgs"
+dotfiles push
+tmux ls
+tmux
 exit
-: 1699561133:0;nvim py/pylab
-: 1699561182:0;cd /etc/default
-: 1699561184:0;ls
-: 1699561198:0;rm grub.bak
-: 1699561204:0;sudo rm grub.bak
-: 1699561226:0;sudo -E -s nvim grub
-: 1699561257:0;sudo update-grub2
-: 1699561324:0;sudo plymouth-set-default-theme -l
-: 1699561335:0;sudo plymouth-set-default-theme -R brogit-plymouth-theme
-: 1699561381:0;sudo --help
-: 1699561409:0;cd .config/zsh
-: 1699561415:0;cd ~/.config/zsh
-: 1699561417:0;ls
-: 1699561419:0;nvim config
-: 1699561506:0;source .zshrc
-: 1699561514:0;vim
-: 1699561524:0;cd /etc/default
-: 1699561529:0;suvim grub
-: 1699561872:0;neofetch
-: 1699561887:0;sudo apt update && sudo flatpak update
-: 1699561902:0;cd
-: 1699561905:0;dotfiles status
-: 1699561923:0;dotfiles .config/zsh .config/tmux
-: 1699561931:0;dotfiles add .config/zsh .config/tmux
+: 1699562121:0;ls
+: 1699562127:0;cd .local
+: 1699562127:0;ls
+: 1699562129:0;cd share
+: 1699562130:0;ls
+: 1699562180:0;nvim tmux
+: 1699562190:0;cd tmux
+: 1699562191:0;ls
+: 1699562193:0;cd resurrect
+: 1699562194:0;ls
+: 1699562204:0;ls -al
+: 1699562223:0;cat tmux_resurrect_20231109T213207.txt
+: 1699562278:0;nvim py/pylab
+: 1699562286:0;clear
+: 1699562404:0;cd ..
+: 1699562409:0;cd tmux
+: 1699562409:0;ls
+: 1699562548:0;cd ..
+: 1699562548:0;ls
+: 1699562558:0;nvim starship.toml
+: 1699562841:0;ls
+: 1699563005:0;clear
+: 1699563163:0;cd ~/Dev
+: 1699563164:0;cd rs
+: 1699563165:0;ls
+: 1699563167:0;cd rustlab
+: 1699563363:0;cd
+: 1699563375:0;clear
+: 1699564084:0;w3m www.google.de
+: 1699564196:0;source .zshrc
+: 1699564203:0;cd zsh
+: 1699564204:0;source .zshrc
+: 1699564253:0;cd ..
+: 1699564259:0;nvim starship.toml
+: 1699564327:0;cd
+: 1699564331:0;dotfiles status
+: 1699564338:0;dotfiles add .config/zsh

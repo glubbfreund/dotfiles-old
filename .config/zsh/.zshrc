@@ -32,6 +32,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # general options
 zle_highlight=('paste:none')
+bindkey -v
 
 # enable color support
 if [ -x /usr/bin/dircolors ]; then
