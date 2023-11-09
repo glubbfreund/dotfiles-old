@@ -30,6 +30,9 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# general options
+zle_highlight=('paste:none')
+
 # enable color support
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -43,6 +46,8 @@ fi
 
 # alias configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias vim='nvim'
+alias suvim='sudo -E -s nvim'
 
 # add addons (as debian package) and enable starship
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh

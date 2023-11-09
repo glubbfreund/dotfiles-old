@@ -12,7 +12,6 @@ mkdir $HOME/.config/git
 git 
 mv .gitconfig $HOME/.config/git/config
 cd git
-nvim config
 nvim lua
 rm .zsh_history
 nvim .vim
@@ -24,7 +23,6 @@ mv -r .vim ~/.config/vim
 cp -r .vim ~/.config/vim
 rm -rf .vim
 nvim init.lua
-cd .config
 cd vim
 cd undodir
 cd %home%oli%.xprofile
@@ -95,7 +93,6 @@ cd /usr
 cd bin
 ls *kit*
 sudo apt install kitty
-kitty
 cd bash
 sh ~/Dev/bash/tmux.sh\
 
@@ -105,7 +102,6 @@ kitty -e /home/oli/Dev/bash/tmux.sh\
 \:w
 cd Downloads
 rm *
-cd ..
 cd Dev
 cd rs
 cd rustlab
@@ -121,7 +117,6 @@ deactivate
 tmux new sys
 tmux help
 cd /usr/share/applications
-ls 
 sh
 nvim kitty.desktop
 sudo nvim kitty.desktop
@@ -129,7 +124,6 @@ cd Dev/bash
 rm test.sh
 source tmux.sh
 tmux kill-server
-tmux 
 tmxu ls
 tmux kill-session 3 sys 5
 tmux kill-session 3 
@@ -137,21 +131,14 @@ tmux kill-session -t 3 sys
 tmux kill-session -t 3 
 tmux kill-session -t sys
 tmux kill-session ls
-tmux kill-session -t 5
-tmux
 tmux kill-session -t 6
-tmux ls
-cd 
 cd Srrc
 cd Src
 git clone https://github.com/ai/hide-keyboard-layout
 cd hide-keyboard-layout
 nvim extension.js
-cd
-dotfiles status
 dotfiles add .config/tmux/tmux.conf .config/zsh/zsh_history
 dotfiles commit -m "updated tmux (zoom indicator)"
-dotfiles push
 lshw 
 sudo apt search lshw
 sudo apt install lshw
@@ -160,37 +147,75 @@ sudo lshw -short
 cmatrix
 ip addr
 hostname
-cd .config/tmux
-ls
 nvim main.rs
+htop
+sudo apt update 
+ln -s .zshrc zshrc
+nvim zshrc
+ls 
+rm zshrc config
+ln -s .zshrc config
+dotfiles add .config/zsh .config/tmux
+dotfiles status
+dotfiles commit -m "added config simlink in zsh config and tmux changes"
+dotfiles push
+man zshoptions
+cd .config/zsh
+nvim config
+source .zshrc
+cd
 neofetch
+tmux new-session sys
+tmux a sys
+nvim
+tmux 
+cd .config/tmux
+cd 
+nvim starship.toml
+nvim py/pylab
+cd .config
+ls -la
+tmux
+ls -a
+tmux kill-session -t 3
+tmux kill-session -t 5
+tmux kill-session -t 4
+tmux ls
+fc-list | grep nerd
+nvim tmux.conf
+ls
+cd ..
+nvim kitty/kitty.conf
+cd kitty
+cd .config/kitty
 clear
 ls -al
-nvim tmux.conf
-htop
+nvim kitty.conf
+fc-list | grep Nerd
+kitty
+tmux a
 exit
-: 1699544437:0;ls -al
-: 1699548638:0;sudo apt update 
-: 1699550169:0;cd .config/zsh
-: 1699550169:0;ls
-: 1699550171:0;cd 
-: 1699550172:0;cd .config/zsh
-: 1699550174:0;ls
-: 1699550178:0;ls -al
-: 1699550268:0;ln -s .zshrc zshrc
-: 1699550269:0;ls
-: 1699550271:0;ls -al
-: 1699550278:0;nvim zshrc
-: 1699550280:0;ls -al
-: 1699550282:0;ls 
-: 1699550292:0;cd
-: 1699550300:0;cd .config/zsh
-: 1699550301:0;ls
-: 1699550304:0;rm zshrc config
-: 1699550309:0;ls
-: 1699550319:0;ln -s .zshrc config
-: 1699550320:0;ls
-: 1699550322:0;nvim config
-: 1699550332:0;cd
-: 1699550335:0;dotfiles status
-: 1699550349:0;dotfiles add .config/zsh .config/tmux
+: 1699561133:0;nvim py/pylab
+: 1699561182:0;cd /etc/default
+: 1699561184:0;ls
+: 1699561198:0;rm grub.bak
+: 1699561204:0;sudo rm grub.bak
+: 1699561226:0;sudo -E -s nvim grub
+: 1699561257:0;sudo update-grub2
+: 1699561324:0;sudo plymouth-set-default-theme -l
+: 1699561335:0;sudo plymouth-set-default-theme -R brogit-plymouth-theme
+: 1699561381:0;sudo --help
+: 1699561409:0;cd .config/zsh
+: 1699561415:0;cd ~/.config/zsh
+: 1699561417:0;ls
+: 1699561419:0;nvim config
+: 1699561506:0;source .zshrc
+: 1699561514:0;vim
+: 1699561524:0;cd /etc/default
+: 1699561529:0;suvim grub
+: 1699561872:0;neofetch
+: 1699561887:0;sudo apt update && sudo flatpak update
+: 1699561902:0;cd
+: 1699561905:0;dotfiles status
+: 1699561923:0;dotfiles .config/zsh .config/tmux
+: 1699561931:0;dotfiles add .config/zsh .config/tmux
