@@ -36,7 +36,6 @@ git add lua/user/options.lua
 git commit -m "changed history location"
 git push
 dotfiles add .config/zsh .config/nvim && dotfiles commit -m "minor things" && dotfiles push
-dotfiles status
 sudo apt search imagemagick
 sudo apt autoremove imagemagick
 sudo apt autopurge imagemagick
@@ -73,7 +72,6 @@ img2sixel debian-colorful.jpg
 sudo apt autopurge libsixel-bin
 w3m
 sudo apt install imagemagick
-neofetch
 kitty -e w3m 
 kitty -e w3m google.de
 tmux --version
@@ -89,7 +87,6 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \\
     installer=nightly
 apt show kitty
 w3m www.google.de
-ls -al
 cd .local
 rm kitty.app
 rm -rf kitty.app
@@ -113,7 +110,6 @@ cd Dev
 cd rs
 cd rustlab
 clera
-clear
 gkbd-keyboard-display
 gkbd-keyboard-display gr
 gkbd-keyboard-display --help
@@ -143,7 +139,6 @@ tmux kill-session -t sys
 tmux kill-session ls
 tmux kill-session -t 5
 tmux
-nvim main.rs
 tmux kill-session -t 6
 tmux ls
 cd 
@@ -153,11 +148,49 @@ git clone https://github.com/ai/hide-keyboard-layout
 cd hide-keyboard-layout
 nvim extension.js
 cd
+dotfiles status
+dotfiles add .config/tmux/tmux.conf .config/zsh/zsh_history
+dotfiles commit -m "updated tmux (zoom indicator)"
+dotfiles push
+lshw 
+sudo apt search lshw
+sudo apt install lshw
+lshw -short
+sudo lshw -short
+cmatrix
+ip addr
+hostname
 cd .config/tmux
 ls
+nvim main.rs
+neofetch
+clear
+ls -al
 nvim tmux.conf
+htop
 exit
-: 1699530520:0;ls
-: 1699530522:0;cd
-: 1699530524:0;dotfiles status
-: 1699530537:0;dotfiles add .config/tmux/tmux.conf .config/zsh/zsh_history
+: 1699544437:0;ls -al
+: 1699548638:0;sudo apt update 
+: 1699550169:0;cd .config/zsh
+: 1699550169:0;ls
+: 1699550171:0;cd 
+: 1699550172:0;cd .config/zsh
+: 1699550174:0;ls
+: 1699550178:0;ls -al
+: 1699550268:0;ln -s .zshrc zshrc
+: 1699550269:0;ls
+: 1699550271:0;ls -al
+: 1699550278:0;nvim zshrc
+: 1699550280:0;ls -al
+: 1699550282:0;ls 
+: 1699550292:0;cd
+: 1699550300:0;cd .config/zsh
+: 1699550301:0;ls
+: 1699550304:0;rm zshrc config
+: 1699550309:0;ls
+: 1699550319:0;ln -s .zshrc config
+: 1699550320:0;ls
+: 1699550322:0;nvim config
+: 1699550332:0;cd
+: 1699550335:0;dotfiles status
+: 1699550349:0;dotfiles add .config/zsh .config/tmux
