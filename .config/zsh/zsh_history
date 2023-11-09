@@ -24,3 +24,96 @@
 : 1699515678:0;dotfiles add .config/zsh/.histfile
 : 1699515682:0;dotfiles status
 : 1699515711:0;dotfiles add .config/zsh/zsh_history && dotfiles commit -m "updated zsh&tmux" && dotfiles push
+: 1699515731:0;ls -al
+: 1699515810:0;mkdir $HOME/.config/git
+: 1699515868:0;git 
+: 1699515930:0;mv .gitconfig $HOME/.config/git/config
+: 1699515939:0;cd .config
+: 1699515940:0;cd git
+: 1699515940:0;ls
+: 1699515943:0;nvim config
+: 1699515951:0;ls -al
+: 1699515953:0;cd
+: 1699515954:0;ls
+: 1699515955:0;ls -al
+: 1699516015:0;nvim .vim
+: 1699516033:0;cd .config
+: 1699516034:0;cd nvim
+: 1699516035:0;ls
+: 1699516049:0;nvim lua
+: 1699516100:0;ls -al
+: 1699516103:0;rm .zsh_history
+: 1699516104:0;ls 
+: 1699516105:0;ls -al
+: 1699516118:0;nvim .vim
+: 1699516144:0;cd .vim
+: 1699516144:0;ls -al
+: 1699516149:0;cd undodir
+: 1699516151:0;ls -al
+: 1699516153:0;cd ..
+: 1699516154:0;ls
+: 1699516156:0;cd ..
+: 1699516157:0;ls
+: 1699516159:0;ls -al
+: 1699516164:0;cd nvim
+: 1699516164:0;ls
+: 1699516169:0;cd .config
+: 1699516171:0;ls
+: 1699516185:0;mkdir vim 
+: 1699516186:0;ls
+: 1699516200:0;cd ..
+: 1699516201:0;ls -al
+: 1699516225:0;cd .config
+: 1699516225:0;ls
+: 1699516231:0;rmdir vim
+: 1699516232:0;cd ..
+: 1699516233:0;ls -al
+: 1699516258:0;mv -r .vim ~/.config/vim
+: 1699516269:0;cp -r .vim ~/.config/vim
+: 1699516272:0;cd .config
+: 1699516273:0;ls
+: 1699516276:0;cd vim
+: 1699516276:0;ls 
+: 1699516279:0;cd undodir
+: 1699516279:0;ls
+: 1699516311:0;ls 
+: 1699516312:0;ls -al
+: 1699516314:0;ls 
+: 1699516315:0;cd 
+: 1699516317:0;ls -al
+: 1699516321:0;rm -rf .vim
+: 1699516325:0;ls -al
+: 1699516333:0;ls 
+: 1699516335:0;nvim init.lua
+: 1699516338:0;ls
+: 1699516340:0;ls -al
+: 1699516349:0;ls
+: 1699516350:0;cd
+: 1699516351:0;ls
+: 1699516375:0;ls -al
+: 1699516386:0;nvim .xprofile
+: 1699516404:0;ls
+: 1699516405:0;ls -al
+: 1699516409:0;cd .config
+: 1699516409:0;ls
+: 1699516413:0;cd vim
+: 1699516413:0;ls
+: 1699516416:0;cd undodir
+: 1699516416:0;ls
+: 1699516431:0;cd %home%oli%.xprofile
+: 1699516437:0;nvim %home%oli%.xprofile
+: 1699516457:0;nvim .xprofile
+: 1699516462:0;ls -al
+: 1699516471:0;dotfiles status
+: 1699516474:0;cd
+: 1699516476:0;dotfiles status
+: 1699516487:0;cd .config/nvim
+: 1699516488:0;ls
+: 1699516493:0;git status
+: 1699516500:0;git add lua/user/options.lua
+: 1699516510:0;git commit -m "changed history location"
+: 1699516511:0;git push
+: 1699516515:0;cd 
+: 1699516516:0;ls
+: 1699516521:0;dotfiles status
+: 1699516543:0;dotfiles add .config/zsh .config/nvim && dotfiles commit -m "minor things" && dotfiles push
