@@ -246,3 +246,40 @@ exit
 : 1699564327:0;cd
 : 1699564331:0;dotfiles status
 : 1699564338:0;dotfiles add .config/zsh
+: 1699564382:0;dotfiles add .config/starship.toml
+: 1699564385:0;dotfiles status
+: 1699564404:0;dotfiles commit -m "configured vim mode for zsh"
+: 1699564407:0;dotfiles push
+: 1699599129:0;nvim py/pylab
+: 1699599252:0;dotfiles status
+: 1699601689:0;cd .config/zsh
+: 1699601689:0;ls
+: 1699601691:0;nvim config
+: 1699601811:0;source ~/.config/zsh/.zshrc
+: 1699601925:0;source .config/zsh/.zshrc
+: 1699601936:0;sudo apt update && sudo flatpak update
+: 1699601952:0;nvim config
+: 1699602207:0;(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES\
+
+: 1699602217:0;echo ZSH_HIGHLIGHT_STYLE
+: 1699602236:0;ZSH_HIGHLIGHT_STYLE[path]
+: 1699602247:0;echo ZSH_HIGHLIGHT_STYLE[path]
+: 1699602252:0;echo ZSH_HIGHLIGHT_STYLE[key]
+: 1699602255:0;echo ZSH_HIGHLIGHT_STYLE[]
+: 1699602608:0;whereis sudo
+: 1699602615:0;whereis ls
+: 1699602755:0;source .config/zsh/.zshrc
+: 1699602782:0;source ~/.config/zsh/.zshrc
+: 1699602820:0;source .config/zsh/.zshrc
+: 1699602848:0;(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES\
+
+: 1699602859:0;ZSH_HIGHLIGHT_STYLES[command]='fg=green,bold'\
+
+: 1699602870:0;ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'\
+
+: 1699602921:0;ZSH_HIGHLIGHT_STYLES[precommand]='fg=yellow'\
+
+: 1699603034:0;sudo apt update && sudo flatpak update
+: 1699603052:0;cd
+: 1699603055:0;dotfiles status
+: 1699603059:0;dotfiles add .config/zsh
