@@ -1,6 +1,5 @@
 dotfiles add .zshrc .histfile .config/tmux/tmux.conf
 dotfiles add .xprofile
-dotfiles add .config/zsh
 rm .config/zsh/.histfile
 rm .config/zsh/.zsh_history
 ls -al .config/zsh
@@ -84,8 +83,6 @@ sudo curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \\
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \\
     installer=nightly
 apt show kitty
-w3m www.google.de
-cd .local
 rm kitty.app
 rm -rf kitty.app
 cd /user/bin
@@ -103,8 +100,6 @@ kitty -e /home/oli/Dev/bash/tmux.sh\
 cd Downloads
 rm *
 cd Dev
-cd rs
-cd rustlab
 clera
 gkbd-keyboard-display
 gkbd-keyboard-display gr
@@ -163,26 +158,15 @@ nvim
 tmux 
 cd .config/tmux
 cd 
-nvim starship.toml
-cd .config
-ls -la
 ls -a
 tmux kill-session -t 3
 tmux kill-session -t 5
 tmux kill-session -t 4
 fc-list | grep nerd
-nvim tmux.conf
-cd ..
 nvim kitty/kitty.conf
-cd kitty
 cd .config/kitty
-clear
-ls -al
-nvim kitty.conf
-fc-list | grep Nerd
 kitty
 tmux a
-nvim py/pylab
 rm grub.bak
 sudo rm grub.bak
 sudo -E -s nvim grub
@@ -190,96 +174,88 @@ sudo update-grub2
 sudo plymouth-set-default-theme -l
 sudo plymouth-set-default-theme -R brogit-plymouth-theme
 sudo --help
-cd .config/zsh
 cd ~/.config/zsh
-ls
-nvim config
-source .zshrc
 vim
 cd /etc/default
 suvim grub
-neofetch
-sudo apt update && sudo flatpak update
-cd
-dotfiles status
 dotfiles .config/zsh .config/tmux
 dotfiles add .config/zsh .config/tmux
 dotfiles commit -m "small chgs"
-dotfiles push
 tmux ls
 tmux
+cd .local
+cd share
+nvim tmux
+cd resurrect
+cat tmux_resurrect_20231109T213207.txt
+cd ~/Dev
+cd rs
+cd rustlab
+w3m www.google.de
+cd zsh
+source .zshrc
+nvim starship.toml
+dotfiles add .config/starship.toml
+dotfiles commit -m "configured vim mode for zsh"
+cd .config/zsh
+nvim config
+echo ZSH_HIGHLIGHT_STYLE
+ZSH_HIGHLIGHT_STYLE[path]
+echo ZSH_HIGHLIGHT_STYLE[path]
+echo ZSH_HIGHLIGHT_STYLE[key]
+echo ZSH_HIGHLIGHT_STYLE[]
+whereis sudo
+whereis ls
+source ~/.config/zsh/.zshrc
+source .config/zsh/.zshrc
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES\
+
+ZSH_HIGHLIGHT_STYLES[command]='fg=green,bold'\
+
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'\
+
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=yellow'\
+
+cd
+dotfiles status
+dotfiles add .config/zsh
+dotfiles commit -m "changed underlines and precommand formatting in zsh"
+dotfiles push
+sudo apt autopurge fish
+rm -rf fish
+cd .config
+cd tmux
+nvim tmux.conf
+fc-cache -f -v
+cd ..
+cd kitty
+fc-list | grep Nerd
+ls -la
+neofetch
+ls
+ls -al
+clear
+sudo apt update && sudo flatpak update
+nvim py/pylab
+nvim kitty.conf
 exit
-: 1699562121:0;ls
-: 1699562127:0;cd .local
-: 1699562127:0;ls
-: 1699562129:0;cd share
-: 1699562130:0;ls
-: 1699562180:0;nvim tmux
-: 1699562190:0;cd tmux
-: 1699562191:0;ls
-: 1699562193:0;cd resurrect
-: 1699562194:0;ls
-: 1699562204:0;ls -al
-: 1699562223:0;cat tmux_resurrect_20231109T213207.txt
-: 1699562278:0;nvim py/pylab
-: 1699562286:0;clear
-: 1699562404:0;cd ..
-: 1699562409:0;cd tmux
-: 1699562409:0;ls
-: 1699562548:0;cd ..
-: 1699562548:0;ls
-: 1699562558:0;nvim starship.toml
-: 1699562841:0;ls
-: 1699563005:0;clear
-: 1699563163:0;cd ~/Dev
-: 1699563164:0;cd rs
-: 1699563165:0;ls
-: 1699563167:0;cd rustlab
-: 1699563363:0;cd
-: 1699563375:0;clear
-: 1699564084:0;w3m www.google.de
-: 1699564196:0;source .zshrc
-: 1699564203:0;cd zsh
-: 1699564204:0;source .zshrc
-: 1699564253:0;cd ..
-: 1699564259:0;nvim starship.toml
-: 1699564327:0;cd
-: 1699564331:0;dotfiles status
-: 1699564338:0;dotfiles add .config/zsh
-: 1699564382:0;dotfiles add .config/starship.toml
-: 1699564385:0;dotfiles status
-: 1699564404:0;dotfiles commit -m "configured vim mode for zsh"
-: 1699564407:0;dotfiles push
-: 1699599129:0;nvim py/pylab
-: 1699599252:0;dotfiles status
-: 1699601689:0;cd .config/zsh
-: 1699601689:0;ls
-: 1699601691:0;nvim config
-: 1699601811:0;source ~/.config/zsh/.zshrc
-: 1699601925:0;source .config/zsh/.zshrc
-: 1699601936:0;sudo apt update && sudo flatpak update
-: 1699601952:0;nvim config
-: 1699602207:0;(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES\
-
-: 1699602217:0;echo ZSH_HIGHLIGHT_STYLE
-: 1699602236:0;ZSH_HIGHLIGHT_STYLE[path]
-: 1699602247:0;echo ZSH_HIGHLIGHT_STYLE[path]
-: 1699602252:0;echo ZSH_HIGHLIGHT_STYLE[key]
-: 1699602255:0;echo ZSH_HIGHLIGHT_STYLE[]
-: 1699602608:0;whereis sudo
-: 1699602615:0;whereis ls
-: 1699602755:0;source .config/zsh/.zshrc
-: 1699602782:0;source ~/.config/zsh/.zshrc
-: 1699602820:0;source .config/zsh/.zshrc
-: 1699602848:0;(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES\
-
-: 1699602859:0;ZSH_HIGHLIGHT_STYLES[command]='fg=green,bold'\
-
-: 1699602870:0;ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'\
-
-: 1699602921:0;ZSH_HIGHLIGHT_STYLES[precommand]='fg=yellow'\
-
-: 1699603034:0;sudo apt update && sudo flatpak update
-: 1699603052:0;cd
-: 1699603055:0;dotfiles status
-: 1699603059:0;dotfiles add .config/zsh
+: 1699653683:0;cd
+: 1699653692:0;cd /etc/apt
+: 1699653693:0;ls
+: 1699653707:0;cd sources.list.d
+: 1699653708:0;ls
+: 1699653716:0;nvim unstable.list
+: 1699653731:0;clear
+: 1699653744:0;sudo apt -t unstable search nautilus-
+: 1699653794:0;sudo apt -t unstable search nautilus-image-converter
+: 1699653808:0;sudo apt -t unstable install nautilus-image-converter
+: 1699653839:0;nautilus -q
+: 1699653841:0;cd
+: 1699653846:0;sudo apt update && sudo flatpak update
+: 1699654139:0;sudo apt -t unstable search nautilus-
+: 1699654579:0;dotfiles
+: 1699654583:0;dotfiles status
+: 1699654594:0;cd
+: 1699654597:0;dotfiles status
+: 1699654616:0;dotfiles add Dev/css/workspaces/ws.css
+: 1699654623:0;dotfiles add .config/zsh
