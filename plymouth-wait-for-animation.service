@@ -1,0 +1,10 @@
+[Unit]
+Description=Waits for Plymouth animation to finish
+Before=plymouth-quit.service plymouth-reboot.service plymouth-poweroff.service gdm.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sleep 7
+
+[Install]
+WantedBy=plymouth-start.service
