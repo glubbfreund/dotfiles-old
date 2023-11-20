@@ -7,7 +7,7 @@ declare -a options=(
     "󰜺 abbrechen"
 )
 
-choice=$(printf '%s\n' "${options[@]}" | dmenu -i -p 'Power Menü:' -sb '#984400' -fn 'JetBrainsMono Nerd Font Mono:size=13')
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -p 'Power Menü:' -sb '#3F4759' -fn 'JetBrainsMono Nerd Font Mono:size=13')
 
 if [[ "$choice" == "󰜺 abbrechen" ]]; then
     exit 0

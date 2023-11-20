@@ -15,7 +15,7 @@ case "$1" in
 
     muted=$(pactl get-sink-mute @DEFAULT_SINK@)
     if [[ $muted == "Mute: yes" ]]; then
-        dunstify -i audio-volume-muted-symbolic -r 12349 "$mutetext"
+        dunstify -i audio-volume-muted-symbolic -r 12349 "$mutetext" -u low
         paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
         exit 0
     fi
@@ -38,5 +38,5 @@ elif [[ $new -lt 75 ]];then
 else
     icon="audio-volume-high-symbolic" 
 fi
-dunstify -i $icon -h int:value:$new -r 12349 "$text"
+dunstify -i $icon -h int:value:$new -r 12349 "$text" -u low
 paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga

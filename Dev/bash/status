@@ -6,6 +6,6 @@ clock() {
 }
 
 while true; do
-    xsetroot -name "$(clock)"
+    xsetroot -name "$(clock) "
     sleep 10
 done
