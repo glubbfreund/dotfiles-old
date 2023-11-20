@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+declare -a options=(
+    " shutdown"
+    " reboot"
+    "󰗼 logoff"
+    "󰜺 abbrechen"
+)
+
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -p 'Power Menü:' -sb '#B36200' -fn 'JetBrainsMono Nerd Font Mono:size=14')
+
+if [[ "$choice" == "󰜺 abbrechen" ]]; then
+    exit 0
+elif [[ "$choice" == " shutdown" ]]; then
+    /sbin/poweroff 
+elif [[ "$choice" == " reboot" ]]; then
+    /sbin/reboot 
+elif [[ "$choice" == "󰗼 logoff" ]]; then
+    case "$XDG_SESSION_DESKTOP" in
+    "dwm")
+        killall status
+        killall nm-applet
+        killall lxpolkit
+        killall picom
+        pkill dwm
+        ;;
+    "i3")
+        i3-msg exit
+        ;;
+    *)
+        exit 1
+        ;;
+    esac
+else
+    exit 1
+fi
+

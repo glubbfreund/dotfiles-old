@@ -1,0 +1,11 @@
+#!/bin/bash
+
+clock() {
+	time=$(date +"%H:%M")
+	echo "$time"
+}
+
+while true; do
+    xsetroot -name "$(clock)"
+    sleep 10
+done

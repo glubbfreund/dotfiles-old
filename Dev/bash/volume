@@ -1,0 +1,42 @@
+#!/bin/bash
+current=$(pactl list sinks | grep '^[[:space:]]Volume:' | tail -n 1 | head -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
+text="Lautstärke"
+mutetext="Lautlos"
+
+case "$1" in
+"up")
+    [ $current -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5% 
+    ;;
+"down")
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+    ;;
+"mute")
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+    muted=$(pactl get-sink-mute @DEFAULT_SINK@)
+    if [[ $muted == "Mute: yes" ]]; then
+        dunstify -i audio-volume-muted-symbolic -r 12349 "$mutetext"
+        paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+        exit 0
+    fi
+    ;;
+*)
+    echo "Choose between up/down/mute."
+    exit 1
+    ;;
+esac
+
+new=$(pactl list sinks | grep '^[[:space:]]Volume:' | \
+    tail -n 1 | head -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
+
+if [[ $new -eq 0 ]];then
+    icon="audio-volume-muted-symbolic" 
+elif [[ $new -lt 30 ]];then
+    icon="audio-volume-low-symbolic" 
+elif [[ $new -lt 75 ]];then
+    icon="audio-volume-medium-symbolic" 
+else
+    icon="audio-volume-high-symbolic" 
+fi
+dunstify -i $icon -h int:value:$new -r 12349 "$text"
+paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga

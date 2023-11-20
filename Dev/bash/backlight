@@ -1,0 +1,42 @@
+#!/bin/bash
+current=$(xbacklight | awk -F'.' '{ print $1 }')
+text="Helligkeit"
+case "$1" in
+"up")
+    if [[ $current -lt 100 ]];then
+
+	    xbacklight +10
+        current=$(xbacklight | awk -F'.' '{ print $1 }')
+        if [[ $current -ge 80 ]];then
+            icon="display-brightness-high-symbolic" 
+        elif [[ $current -ge 50 ]];then
+            icon="display-brightness-medium-symbolic" 
+        elif [[ $current -lt 50 ]];then
+            icon="display-brightness-low-symbolic" 
+        fi
+        dunstify -i $icon -h int:value:$current -r 12341 "$text"
+        paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+    fi
+    ;;
+"down")
+    xbacklight -10
+    current=$(xbacklight | awk -F'.' '{ print $1 }')
+
+    if [[ $current -ge 80 ]];then
+        icon="display-brightness-high-symbolic" 
+    elif [[ $current -ge 50 ]];then
+        icon="display-brightness-medium-symbolic" 
+    elif [[ $current -lt 50 ]];then
+        icon="display-brightness-low-symbolic" 
+    fi    
+
+    dunstify -i $icon -h int:value:$current -r 12341 "$text"
+    paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+    ;;
+*)
+    echo "Choose between up/down."
+    exit 1
+    ;;
+esac
+
+
