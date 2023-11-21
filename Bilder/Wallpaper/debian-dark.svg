@@ -12,14 +12,14 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1920"
-   height="1200"
+   height="1080"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.2 r9819"
    inkscape:export-filename="/Users/adrienaubourg/Dropbox/wheezy_artwork/exports/proposals/wallpaper_4.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
-   sodipodi:docname="1920x1200.svg">
+   sodipodi:docname="wallpaper.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -76,7 +76,7 @@
        fx="960"
        fy="512.36218"
        r="960"
-       gradientTransform="matrix(1.2448906,0,0,0.97403011,-235.09492,13.305993)"
+       gradientTransform="matrix(1.2448906,0,0,0.8766271,-235.09492,63.211612)"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
@@ -183,7 +183,7 @@
        inkscape:collect="always" />
     <filter
        id="filter4569"
-       style="color-interpolation-filters:sRGB"
+       style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow">
       <feFlood
          id="feFlood4571"
@@ -198,6 +198,7 @@
          result="composite1" />
       <feGaussianBlur
          id="feGaussianBlur4575"
+         in="composite"
          stdDeviation="2"
          result="blur" />
       <feOffset
@@ -437,7 +438,7 @@
        inkscape:label="Roughen"
        inkscape:menu="ABCs"
        inkscape:menu-tooltip="Small-scale roughening to edges and content"
-       style="color-interpolation-filters:sRGB">
+       color-interpolation-filters="sRGB">
       <feTurbulence
          id="feTurbulence4006"
          numOctaves="3"
@@ -461,21 +462,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="811.61003"
-     inkscape:cy="646.18473"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="765.16154"
+     inkscape:cy="555.78155"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1007"
+     inkscape:window-width="2560"
+     inkscape:window-height="1392"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -492,21 +489,20 @@
      inkscape:label="Fond"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,87.637817)"
+     transform="translate(0,27.637817)"
      sodipodi:insensitive="true">
     <rect
        style="fill:url(#radialGradient3765);fill-opacity:1;stroke:none"
        id="rect2985"
        width="1920"
-       height="1200"
+       height="1080"
        x="0"
-       y="-87.637817" />
+       y="-27.637817" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Deco"
-     transform="translate(0,60)">
+     inkscape:label="Deco">
     <g
        id="g6515"
        transform="matrix(2.6288196,0,0,2.6288196,-2672.0318,-1229.7813)"
@@ -5333,8 +5329,7 @@
      id="layer4"
      inkscape:label="Logo"
      style="display:inline"
-     sodipodi:insensitive="true"
-     transform="translate(0,60)">
+     sodipodi:insensitive="true">
     <g
        style="overflow:visible"
        id="g3946-7"
