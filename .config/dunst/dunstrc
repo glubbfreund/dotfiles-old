@@ -212,7 +212,7 @@
     max_icon_size = 128
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /home/oli/.local/share/icons/kora/apps/scalable:/home/oli/.local/share/icons/kora/apps/symbolic:/usr/share/icons/kora/status/symbolic:/usr/share/icons/kora/actions/symbolic:/usr/share/icons/kora/apps/symbolic
+    icon_path = /home/oli/.local/share/icons/kora/apps/scalable:/home/oli/.local/share/icons/kora/apps/symbolic:/home/oli/.local/share/icons/kora/status/symbolic:/home/oli/.local/share/icons/kora/actions/symbolic:/home/oli.local/share/icons/kora/apps/symbolic
 
     ### History ###
 
