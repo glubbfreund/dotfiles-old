@@ -7,7 +7,7 @@ declare -a options=(
     "󰜺 abbrechen"
 )
 
-choice=$(printf '%s\n' "${options[@]}" | dmenu -i -x 165 -z 1500)
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -x 200 -z 1500)
 
 if [[ "$choice" == "󰜺 abbrechen" ]]; then
     exit 0
