@@ -7,7 +7,7 @@ declare -a options=(
     "󰜺 abbrechen"
 )
 
-choice=$(printf '%s\n' "${options[@]}" | dmenu -i -x 175 -z 1635)
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -x 165 -z 1500)
 
 if [[ "$choice" == "󰜺 abbrechen" ]]; then
     exit 0
@@ -22,6 +22,7 @@ elif [[ "$choice" == "󰗼 logoff" ]]; then
         killall nm-applet
         killall lxpolkit
         killall picom
+        killall blueman-applet
         pkill dwm
         ;;
     "i3")
