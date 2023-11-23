@@ -39,7 +39,7 @@ bindkey -v
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 # remove underline also for sudo precommand
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=yellow,bold'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'
 
 # enable color support
 if [ -x /usr/bin/dircolors ]; then
