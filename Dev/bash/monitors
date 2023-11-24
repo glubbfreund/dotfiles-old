@@ -1,0 +1,17 @@
+#!/bin/bash
+internal_screen="DP-0"
+external_screen_right="HDMI-0"
+external_screen_left="DP-2"
+monitors_connected=$(xrandr | grep " connected " | wc -l)
+echo "$monitors_connected Bildschirme erkannt."
+
+if [[ monitors_connected -eq 3 ]];then
+    xrandr --output $internal_screen --off
+    echo "Internen Monitor deaktiviert."
+    xrandr --output $external_screen_right --right-of $external_screen_left --auto 
+    echo "Reihenfolge der Bildschirme angepasst."
+    echo "$external_screen_right ist rechts und $external_screen_left ist links." 
+else
+    xrandr --output $internal_screen --auto 
+    echo "Internen Monitor aktiviert"
+fi
