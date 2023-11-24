@@ -21,6 +21,6 @@ My wallpapers, scripts, css file for improved workspace indicator (gnome), "plym
   xargs -I{} mv {} .dotfiles-backup/{}
 </li>
 <li>
-  dotfiles checkout (with force parameter)
+  dotfiles checkout
 </li>
 </ul>
