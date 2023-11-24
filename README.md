@@ -1,4 +1,6 @@
-# restore
+# my dotfiles, using gnome and dwm
+## whats inside?
+## how to restore
 <ul>
 <li>
   add alias =====> dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" 
