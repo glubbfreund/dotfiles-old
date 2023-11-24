@@ -3,9 +3,9 @@ internal_screen="DP-0"
 external_screen_right="HDMI-0"
 external_screen_left="DP-2"
 monitors_connected=$(xrandr | grep " connected " | wc -l)
-echo "$monitors_connected Bildschirme erkannt."
+echo "$monitors_connected Bildschirm(e) erkannt."
 
-if [[ monitors_connected -eq 3 ]];then
+if [[ monitors_connected -ge 3 ]];then
     xrandr --output $internal_screen --off
     echo "Internen Monitor deaktiviert."
     xrandr --output $external_screen_right --right-of $external_screen_left --auto 
