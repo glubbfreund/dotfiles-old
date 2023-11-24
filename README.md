@@ -17,4 +17,7 @@
   dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
   xargs -I{} mv {} .dotfiles-backup/{}
 </li>
+<li>
+  dotfiles checkout
+</li>
 </ul>
