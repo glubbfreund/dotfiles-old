@@ -3,10 +3,9 @@
 declare -a options=(
     "Mitteilungston"
     "Klingeln"
-    "Markierten Link teilen"
-    "Datei aus Zwischenablage teilen"
-    "Markierten Text teilen"
-    "Trennen"
+    "Link teilen"
+    "Datei teilen"
+    "Text teilen"
     "Abbrechen"
 )
 
@@ -38,15 +37,15 @@ case "$choice" in
     $connectcall -d $device --ring 
     exit 0 
     ;;
-"Markierten Text teilen")
+"Text teilen")
     $connectcall -d $device --share-text=$(xclip -o)
     exit 0 
     ;;
-"Markierten Link teilen")
+"Link teilen")
     $connectcall -d $device --share-link=$(xclip -o)
     exit 0 
     ;;
-"Datei aus Zwischenablage teilen")
+"Datei teilen")
     $connectcall -d $device --share-file=$(xclip -o -selection clipboard)
     exit 0 
     ;;
