@@ -1,22 +1,28 @@
 #!/usr/bin/bash
 
 declare -a options=(
-    "Mitteilungston"
-    "Klingeln"
-    "Link teilen"
-    "Datei teilen"
-    "Text teilen"
-    "Abbrechen"
+    "󰣓 Mitteilungston"
+    "󰥒 klingeln"
+    " Link teilen"
+    "󱀹 Datei teilen"
+    " Text teilen"
+    "󰜺 abbrechen"
 )
 
 connectcall="$HOME/.local/share/gnome-shell/extensions/gsconnect@andyholmes.github.io/service/daemon.js"
 devicelist=$(gjs $connectcall -a)
-devicelist+=("abort$(printf '\t')abbrechen")
-choice=$(printf '%s\n' "${devicelist[@]}" | awk -F'\t' '{print $2}' | dmenu -i)
+styleddevicelist=$()
 
 for i in "${devicelist[@]}"
 do
-   : 
+    styleddevicelist+=$(printf '%s\n' "$i" | awk -F'\t' '{print $1"\t󰄜 "$2}')
+done
+
+styleddevicelist+=("abort$(printf '\t')󰜺 abbrechen")
+choice=$(printf '%s\n' "${styleddevicelist[@]}" | awk -F'\t' '{print $2}' | dmenu -i)
+
+for i in "${styleddevicelist[@]}"
+do
    if [[ $(printf '%s\n' "$i" | awk -F'\t' '{print $2}') == $choice ]]; then
        choice=$(printf '%s\n' "$i" | awk -F'\t' '{print $1}')
    fi
@@ -26,26 +32,26 @@ done
 choice=$(printf '%s\n' "${options[@]}" | dmenu -i)
 
 case "$choice" in
-"Abbrechen")
+"󰜺 abbrechen")
     exit 0 
     ;;
-"Mitteilungston")
+"󰣓 Mitteilungston")
     $connectcall -d $device --ping 
     exit 0 
     ;;
-"Klingeln")
+"󰥒 klingeln")
     $connectcall -d $device --ring 
     exit 0 
     ;;
-"Text teilen")
+" Text teilen")
     $connectcall -d $device --share-text=$(xclip -o)
     exit 0 
     ;;
-"Link teilen")
+" Link teilen")
     $connectcall -d $device --share-link=$(xclip -o)
     exit 0 
     ;;
-"Datei teilen")
+"󱀹 Datei teilen")
     $connectcall -d $device --share-file=$(xclip -o -selection clipboard)
     exit 0 
     ;;
