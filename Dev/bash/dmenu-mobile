@@ -1,0 +1,57 @@
+#!/usr/bin/bash
+
+declare -a options=(
+    "Mitteilungston"
+    "Klingeln"
+    "Markierten Link teilen"
+    "Datei aus Zwischenablage teilen"
+    "Markierten Text teilen"
+    "Trennen"
+    "Abbrechen"
+)
+
+connectcall="$HOME/.local/share/gnome-shell/extensions/gsconnect@andyholmes.github.io/service/daemon.js"
+devicelist=$(gjs $connectcall -a)
+devicelist+=("abort$(printf '\t')abbrechen")
+choice=$(printf '%s\n' "${devicelist[@]}" | awk -F'\t' '{print $2}' | dmenu -i)
+
+for i in "${devicelist[@]}"
+do
+   : 
+   if [[ $(printf '%s\n' "$i" | awk -F'\t' '{print $2}') == $choice ]]; then
+       choice=$(printf '%s\n' "$i" | awk -F'\t' '{print $1}')
+   fi
+done
+
+[[ $choice == "abort" ]] && exit 0 || device=$choice
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i)
+
+case "$choice" in
+"Abbrechen")
+    exit 0 
+    ;;
+"Mitteilungston")
+    $connectcall -d $device --ping 
+    exit 0 
+    ;;
+"Klingeln")
+    $connectcall -d $device --ring 
+    exit 0 
+    ;;
+"Markierten Text teilen")
+    $connectcall -d $device --share-text=$(xclip -o)
+    exit 0 
+    ;;
+"Markierten Link teilen")
+    $connectcall -d $device --share-link=$(xclip -o)
+    exit 0 
+    ;;
+"Datei aus Zwischenablage teilen")
+    $connectcall -d $device --share-file=$(xclip -o -selection clipboard)
+    exit 0 
+    ;;
+*)
+    exit 1
+    ;;
+esac
+
