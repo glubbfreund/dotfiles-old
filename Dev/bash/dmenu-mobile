@@ -28,7 +28,7 @@ do
    fi
 done
 
-[[ $choice == "abort" ]] && exit 0 || device=$choice
+[[ $choice == "abort" || -z $choice ]] && exit 0 || device=$choice
 choice=$(printf '%s\n' "${options[@]}" | dmenu -i)
 
 case "$choice" in
@@ -54,6 +54,9 @@ case "$choice" in
 "󱀹 Datei teilen")
     $connectcall -d $device --share-file=$(xclip -o -selection clipboard)
     exit 0 
+    ;;
+"")
+    exit 0
     ;;
 *)
     exit 1
