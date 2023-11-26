@@ -6,6 +6,8 @@ declare -a options=(
     " Link teilen"
     "󱀹 Datei teilen"
     " Text teilen"
+    "󱟽 Verbinden"
+    "󰥍 Trennen"
     "󰜺 abbrechen"
 )
 
@@ -15,7 +17,13 @@ styleddevicelist=$()
 
 for i in "${devicelist[@]}"
 do
-    styleddevicelist+=$(printf '%s\n' "$i" | awk -F'\t' '{print $1"\t󰄜 "$2}')
+    devicestatus=$(printf '%s\n' "$i" | awk -F '\t' '{print $4}')    
+
+    if [[ $devicestatus == "true" ]];then
+        styleddevicelist+=$(printf '%s\n' "$i" | awk -F'\t' '{print $1"\t󱟽 "$2}')
+    else
+        styleddevicelist+=$(printf '%s\n' "$i" | awk -F'\t' '{print $1"\t󰥍 "$2}')
+    fi
 done
 
 styleddevicelist+=("abort$(printf '\t')󰜺 abbrechen")
@@ -55,8 +63,15 @@ case "$choice" in
     $connectcall -d $device --share-file=$(xclip -o -selection clipboard)
     exit 0 
     ;;
+"󱟽 Verbinden")
+    $connectcall -d $device --pair 
+    exit 0 
+    ;;
+"󰥍 Trennen")
+    $connectcall -d $device --unpair
+    exit 0 
+    ;;
 *)
     exit 1
     ;;
 esac
-
