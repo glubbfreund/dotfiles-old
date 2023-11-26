@@ -31,3 +31,5 @@ if [ -d "/var/lib/flatpak/exports/bin" ] ; then
     export PATH="/var/lib/flatpak/exports/bin:$PATH"
 fi
 
+# IBus for kitty
+export GLFW_IM_MODULE=ibus
