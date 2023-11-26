@@ -9,13 +9,13 @@ declare -a options=(
 
 choice=$(printf '%s\n' "${options[@]}" | dmenu -i)
 
-if [[ "$choice" == "󰜺 abbrechen" ]]; then
+if [[ $choice == "󰜺 abbrechen" || -z $choice ]]; then
     exit 0
-elif [[ "$choice" == " shutdown" ]]; then
+elif [[ $choice == " shutdown" ]]; then
     /sbin/poweroff 
-elif [[ "$choice" == " reboot" ]]; then
+elif [[ $choice == " reboot" ]]; then
     /sbin/reboot 
-elif [[ "$choice" == "󰗼 logoff" ]]; then
+elif [[ $choice == "󰗼 logoff" ]]; then
     case "$XDG_SESSION_DESKTOP" in
     "dwm")
         killall status

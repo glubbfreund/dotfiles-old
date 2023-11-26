@@ -32,7 +32,7 @@ done
 choice=$(printf '%s\n' "${options[@]}" | dmenu -i)
 
 case "$choice" in
-"󰜺 abbrechen")
+"󰜺 abbrechen" || "")
     exit 0 
     ;;
 "󰣓 Mitteilungston")
@@ -54,9 +54,6 @@ case "$choice" in
 "󱀹 Datei teilen")
     $connectcall -d $device --share-file=$(xclip -o -selection clipboard)
     exit 0 
-    ;;
-"")
-    exit 0
     ;;
 *)
     exit 1
