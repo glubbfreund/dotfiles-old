@@ -10,7 +10,7 @@ My wallpapers, scripts, css file for improved workspace indicator (gnome), "plym
   echo ".dotfiles" >> .gitignore   
 </li>
 <li>
-  git clone --bare https://github.com/glubbfreund/dotfiles $HOME/.dotfiles
+  git clone --recursive --bare https://github.com/glubbfreund/dotfiles $HOME/.dotfiles
 </li>
 <li>
   dotfiles config --local status.showUntrackedFiles no
@@ -22,5 +22,10 @@ My wallpapers, scripts, css file for improved workspace indicator (gnome), "plym
 </li>
 <li>
   dotfiles checkout
+</li>
+<li>
+  load the submodules:
+  git submodule init 
+  git submodule update
 </li>
 </ul>
