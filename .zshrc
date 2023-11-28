@@ -56,6 +56,17 @@ fi
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vim='nvim'
 alias suvim='sudo -E -s nvim'
+alias ls='exa --icons'
+alias cat='batcat --theme=ansi'
+
+sudo() {
+  if [ "$1" = "apt" ]; then
+    shift
+    command sudo nala "$@"
+  else
+    command sudo "$@"
+  fi
+}
 
 # add addons (as debian package) and enable starship
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
